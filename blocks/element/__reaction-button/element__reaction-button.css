@@ -1,0 +1,15 @@
+.element__reaction-button {
+    width: 22px;
+    height: 19px;
+    padding: 0;
+    border: 0;
+    background: url(../../../images/__reaction-button.svg) center no-repeat;
+    background-size: 100%;
+    margin-top: 5px;
+    transition: opacity 0.3s;
+}
+
+.element__reaction-button:hover {
+    opacity: 0.5;  
+    cursor: pointer;
+}

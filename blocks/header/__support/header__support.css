@@ -1,0 +1,6 @@
+@media screen and (max-width: 600px) {
+    .header__support {
+        max-width: 266px;
+        width: 100%;
+    }
+}
