@@ -1,6 +1,5 @@
 .root {
     background-color: black;
-    padding-top: 45px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;

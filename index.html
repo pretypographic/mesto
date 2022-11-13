@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset='utf-8'>
     <title>Mesto</title>
@@ -7,68 +7,68 @@
     <link rel='stylesheet' type='text/css' media='screen' href='./pages/index.css'>
 </head>
 <body class="root">
-    <header class="header">
+    <header class="header markup">
         <div class="header__support">
             <img src="./images/__logo.svg" alt="Mesto. Россия." class="header__logo">
         </div>
     </header>
     <!-- контртитул -->
-    <main class="main">
+    <main class="main markup">
         <section class="profile">
             <div class="profile__field">
                 <img src="./images/__avatar.jpg" alt="Аватар профиля." class="profile__avatar">
                 <div class="profile__info">
                     <h1 class="profile__name">Жак-Ив Кусто</h1>
-                    <button class="profile__edit-button"></button>
+                    <button aria-label="Редактировать профиль." class="profile__edit-button"></button>
                     <p class="profile__mission">Исследователь океана</p>
                 </div>
             </div>
-            <button class="profile__add-button"></button>
+            <button aria-label="Добавить изображение." class="profile__add-button"></button>
         </section>
         <!-- профиль -->
 
         <section class="elements">
             <div class="element">
-                <img src="./images/elements/__element.jpg" alt="" class="element__img">
+                <img src="./images/elements/__element.jpg" alt="Пейзаж церкци." class="element__img">
                 <div class="element__description">
                     <h2 class="element__title">Карачаевск</h2>
-                    <button class="element__reaction-button"></button>
+                    <button aria-label="Одобрить." class="element__reaction-button"></button>
                 </div>
             </div>
             <!-- элемент альбома -->            
             <div class="element">
-                <img src="./images/elements/__element1.jpg" alt="" class="element__img">
+                <img src="./images/elements/__element1.jpg" alt="Пейзаж предгорья." class="element__img">
                 <div class="element__description">
                     <h2 class="element__title">Гора Эльбрус</h2>
-                    <button class="element__reaction-button"></button>
+                    <button aria-label="Одобрить." class="element__reaction-button"></button>
                 </div>
             </div>
             <div class="element">
-                <img src="./images/elements/__element2.jpg" alt="" class="element__img">
+                <img src="./images/elements/__element2.jpg" alt="Пейзаж крутых гор с лесом." class="element__img">
                 <div class="element__description">
                     <h2 class="element__title">Домбай</h2>
-                    <button class="element__reaction-button"></button>
+                    <button aria-label="Одобрить." class="element__reaction-button"></button>
                 </div>
             </div>
             <div class="element">
-                <img src="./images/elements/__element1.jpg" alt="" class="element__img">
+                <img src="./images/elements/__element1.jpg" alt="Пейзаж предгорья." class="element__img">
                 <div class="element__description">
                     <h2 class="element__title">Гора Эльбрус</h2>
-                    <button class="element__reaction-button"></button>
+                    <button aria-label="Одобрить." class="element__reaction-button"></button>
                 </div>
             </div>
             <div class="element">
-                <img src="./images/elements/__element2.jpg" alt="" class="element__img">
+                <img src="./images/elements/__element2.jpg" alt="Пейзаж крутых гор с лесом." class="element__img">
                 <div class="element__description">
                     <h2 class="element__title">Домбай</h2>
-                    <button class="element__reaction-button"></button>
+                    <button aria-label="Одобрить." class="element__reaction-button"></button>
                 </div>
             </div>
             <div class="element">
-                <img src="./images/elements/__element.jpg" alt="" class="element__img">
+                <img src="./images/elements/__element.jpg" alt="Пейзаж церкци." class="element__img">
                 <div class="element__description">
                     <h2 class="element__title">Карачаево-Черкесия</h2>
-                    <button class="element__reaction-button"></button>
+                    <button aria-label="Одобрить." class="element__reaction-button"></button>
                 </div>
             </div>
         </section>
@@ -77,9 +77,14 @@
     </main>
     <!-- разворот -->
 
+    <footer class="footer markup">
+        <p class="footer__paragraph">&copy; 2020 Mesto Russia</p>
+    </footer>
+    <!-- нижний колонтитул -->
+
     <section class="popup">
         <div class="popup__container">
-            <button class="popup__close-button"></button>
+            <button aria-label="Закрыть." class="popup__close-button"></button>
             <h2 class="popup__title">Редактировать профиль</h2>
             <form class="popup__form">
                 <input type="text" value="Жак-Ив Кусто" class="popup__name">
@@ -89,11 +94,6 @@
         </div>
     </section>
     <!-- форма профиля  -->
-
-    <footer class="footer">
-        <p class="footer__paragraph">&copy; 2020 Mesto Russia</p>
-    </footer>
-    <!-- нижний колонтитул -->
-    <script src='./pages/index.js'></script>    
+    <script src='./scripts/index.js'></script>    
 </body>
 </html>

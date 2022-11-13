@@ -20,7 +20,7 @@ function editClosed() {
     popup.classList.remove('popup_opened');
 };
 
-function formSubmit() {
+function formSubmit(event) {
     event.preventDefault();
     nameInput.value;
     profileName.textContent = nameInput.value;
