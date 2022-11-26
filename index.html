@@ -28,52 +28,29 @@
         <!-- профиль -->
 
         <section class="elements">
-            <div class="element">
-                <img src="./images/elements/__element.jpg" alt="Пейзаж церкци." class="element__img">
-                <div class="element__description">
-                    <h2 class="element__title">Карачаевск</h2>
-                    <button aria-label="Одобрить." class="element__reaction-button"></button>
+            <template id="elementTemplate">
+                <div class="element">
+                    <img class="element__img">
+                    <div class="element__description">
+                        <h2 class="element__title"></h2>
+                        <button aria-label="Одобрить." class="element__reaction-button"></button>
+                    </div>
+                    <button aria-label="Удалить." class="element__trash-button"></button>
                 </div>
-            </div>
-            <!-- элемент альбома -->            
-            <div class="element">
-                <img src="./images/elements/__element1.jpg" alt="Пейзаж предгорья." class="element__img">
-                <div class="element__description">
-                    <h2 class="element__title">Гора Эльбрус</h2>
-                    <button aria-label="Одобрить." class="element__reaction-button"></button>
-                </div>
-            </div>
-            <div class="element">
-                <img src="./images/elements/__element2.jpg" alt="Пейзаж крутых гор с лесом." class="element__img">
-                <div class="element__description">
-                    <h2 class="element__title">Домбай</h2>
-                    <button aria-label="Одобрить." class="element__reaction-button"></button>
-                </div>
-            </div>
-            <div class="element">
-                <img src="./images/elements/__element1.jpg" alt="Пейзаж предгорья." class="element__img">
-                <div class="element__description">
-                    <h2 class="element__title">Гора Эльбрус</h2>
-                    <button aria-label="Одобрить." class="element__reaction-button"></button>
-                </div>
-            </div>
-            <div class="element">
-                <img src="./images/elements/__element2.jpg" alt="Пейзаж крутых гор с лесом." class="element__img">
-                <div class="element__description">
-                    <h2 class="element__title">Домбай</h2>
-                    <button aria-label="Одобрить." class="element__reaction-button"></button>
-                </div>
-            </div>
-            <div class="element">
-                <img src="./images/elements/__element.jpg" alt="Пейзаж церкци." class="element__img">
-                <div class="element__description">
-                    <h2 class="element__title">Карачаево-Черкесия</h2>
-                    <button aria-label="Одобрить." class="element__reaction-button"></button>
-                </div>
-            </div>
+             </template>
+            <!-- элемент альбома -->
         </section>
         <!-- альбом -->
         
+        <template id="imageTemplate">
+            <section class="behold">
+                <div class="behold__screen markup">
+                    <img class="behold__image">
+                    <p class="behold__name"></p>
+                    <button aria-label="Закрыть." class="behold__close-button"></button>
+                </div>
+            </section>
+        </template>
     </main>
     <!-- разворот -->
 
@@ -82,11 +59,11 @@
     </footer>
     <!-- нижний колонтитул -->
 
-    <section class="popup">
+    <section class="popup" id="profileSettings">
         <div class="popup__container">
             <button aria-label="Закрыть." class="popup__close-button"></button>
             <h2 class="popup__title">Редактировать профиль</h2>
-            <form class="popup__form">
+            <form class="popup__form" id="profileForm">
                 <input type="text" value="Жак-Ив Кусто" class="popup__name">
                 <input type="text" value="Исследователь океана" class="popup__mission">
                 <button type="submit" class="popup__save-button">Сохранить</button>
@@ -94,6 +71,19 @@
         </div>
     </section>
     <!-- форма профиля  -->
+
+    <section class="popup" id="newLocation">
+        <div class="popup__container">
+            <button aria-label="Закрыть." class="popup__close-button"></button>
+            <h2 class="popup__title">Новое место</h2>
+            <form class="popup__form" id="locationForm">
+                <input type="text" placeholder="Название" class="popup__name">
+                <input type="text" placeholder="Ссылка на картинку" class="popup__mission">
+                <button type="submit" class="popup__save-button">Создать</button>
+            </form>
+        </div>
+    </section>
+    <!-- форма добавления элемента в альбом -->
     <script src='./scripts/index.js'></script>    
 </body>
 </html>

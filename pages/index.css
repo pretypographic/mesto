@@ -26,12 +26,20 @@
 @import url(../blocks/element/__title/element__title.css);
 @import url(../blocks/element/__reaction-button/element__reaction-button.css);
 @import url(../blocks/element/__reaction-button/__reaction-button_active/element__reaction-button_active.css);
+@import url(../blocks/element/__trash-button/element__trash-button.css);
 /* элемент альбома */
+@import url(../blocks/behold/behold.css);
+@import url(../blocks/behold/__screen/behold__screen.css);
+@import url(../blocks/behold/__image/behold__image.css);
+@import url(../blocks/behold/__close-button/behold__close-button.css);
+@import url(../blocks/behold/__name/behold__name.css);
+
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__paragraph/footer__paragraph.css);
 /* нижний колонтитул */
 @import url(../blocks/popup/popup.css);
-@import url(../blocks/popup/_opened/popup_opened.css);
+@import url(../blocks/popup/_condition/popup_condition_opened.css);
+@import url(../blocks/popup/_condition/popup_condition_closed.css);
 @import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/__close-button/popup__close-button.css);
 @import url(../blocks/popup/__title/popup__title.css);
