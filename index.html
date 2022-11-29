@@ -51,11 +51,11 @@
 
     <section class="popup" id="profileSettings">
         <div class="popup__container">
-            <button aria-label="Закрыть." class="popup__close-button"></button>
+            <button aria-label="Закрыть." class="close-button"></button>
             <h2 class="popup__title">Редактировать профиль</h2>
             <form class="popup__form" id="profileForm">
-                <input type="text" value="Жак-Ив Кусто" class="popup__name">
-                <input type="text" value="Исследователь океана" class="popup__mission">
+                <input type="text" placeholder="Напишите имя" value="Жак-Ив Кусто" class="popup__input popup__input_type_upper" id="profileName" name="profile name">
+                <input type="text" placeholder="Напишите миссию" value="Исследователь океана" class="popup__input popup__input_type_lower" id="profileMission" name="profile mission">
                 <button type="submit" class="popup__save-button">Сохранить</button>
             </form>
         </div>
@@ -64,11 +64,11 @@
 
     <section class="popup" id="newLocation">
         <div class="popup__container">
-            <button aria-label="Закрыть." class="popup__close-button"></button>
+            <button aria-label="Закрыть." class="close-button"></button>
             <h2 class="popup__title">Новое место</h2>
             <form class="popup__form" id="locationForm">
-                <input type="text" placeholder="Название" class="popup__name">
-                <input type="text" placeholder="Ссылка на картинку" class="popup__mission">
+                <input type="text" placeholder="Название" class="popup__input popup__input_type_upper" id="locationName" name="location name">
+                <input type="text" placeholder="Ссылка на картинку" class="popup__input popup__input_type_lower" id="locationLink" name="location link" required>
                 <button type="submit" class="popup__save-button">Создать</button>
             </form>
         </div>
@@ -79,7 +79,7 @@
         <div class="behold markup">
             <img class="behold__image">
             <p class="behold__name"></p>
-            <button aria-label="Закрыть." class="behold__close-button"></button>
+            <button aria-label="Закрыть." class="close-button"></button>
         </div>
     </section>
     <script src='./scripts/index.js'></script>    

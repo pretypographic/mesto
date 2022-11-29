@@ -36,14 +36,14 @@
 @import url(../blocks/popup/_condition/popup_condition_closed.css);
 @import url(../blocks/popup/_type/popup_type_behold.css);
 @import url(../blocks/popup/__container/popup__container.css);
-@import url(../blocks/popup/__close-button/popup__close-button.css);
 @import url(../blocks/popup/__title/popup__title.css);
-@import url(../blocks/popup/__name/popup__name.css);
-@import url(../blocks/popup/__mission/popup__mission.css);
+@import url(../blocks/popup/__input/popup__input.css);
+@import url(../blocks/popup/__input/_type/popup__input_type_upper.css);
+@import url(../blocks/popup/__input/_type/popup__input_type_lower.css);
 @import url(../blocks/popup/__save-button/popup__save-button.css);
 /* форма */
 @import url(../blocks/behold/behold.css);
 @import url(../blocks/behold/__image/behold__image.css);
-@import url(../blocks/behold/__close-button/behold__close-button.css);
 @import url(../blocks/behold/__name/behold__name.css);
 /* просмотр */
+@import url(../blocks/close-button/close-button.css);
