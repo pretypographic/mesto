@@ -25,11 +25,6 @@ function openPopup(form) {
 function closePopup(form) {
   form.classList.remove('popup_condition_opened');
   form.classList.add('popup_condition_closed');
-
-  if (form === profileSettings) {
-    profileFormName.value = profileName.textContent;
-    profileFormMission.value = profileMission.textContent;
-  }
 };
 
 function submitProfileForm(event) {
@@ -55,14 +50,18 @@ function submitLocationForm(event) {
 };
 
 const editButton = profile.querySelector('.profile__edit-button');
-editButton.addEventListener('click', () => openPopup(profileSettings));
+editButton.addEventListener('click', () => {
+  profileFormName.value = profileName.textContent;
+  profileFormMission.value = profileMission.textContent;
+  openPopup(profileSettings)
+});
 profileForm.addEventListener('submit', submitProfileForm);
 
 const addButton = profile.querySelector('.profile__add-button');
 addButton.addEventListener('click', () => openPopup(newLocation));
 locationForm.addEventListener('submit', submitLocationForm);
 
-const closeButton = document.querySelectorAll('.close-button');
+const closeButtons = document.querySelectorAll('.close-button');
 closeButton.forEach((button) => {
   const popup = button.closest('.popup');
   button.addEventListener('click', () => closePopup(popup));
