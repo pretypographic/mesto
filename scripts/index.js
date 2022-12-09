@@ -62,10 +62,26 @@ addButton.addEventListener('click', () => openPopup(newLocation));
 locationForm.addEventListener('submit', submitLocationForm);
 
 const closeButtons = document.querySelectorAll('.close-button');
-closeButton.forEach((button) => {
+closeButtons.forEach((button) => {
   const popup = button.closest('.popup');
   button.addEventListener('click', () => closePopup(popup));
 });
+
+const popups = document.querySelectorAll('.popup');
+popups.forEach((popup) => {
+  popup.addEventListener('click', (event) => {
+    const popupField = popup.querySelector('.popup-field');
+    const withinPopupField = event.composedPath().includes(popupField);
+    if (!withinPopupField) {
+      closePopup(popup);
+    }
+    document.addEventListener('keyup', (event) => {
+      if (event.key == 'Escape') {
+        closePopup(popup);
+      }
+    })
+  })
+})
 
 const initialCards = [
     {

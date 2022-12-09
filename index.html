@@ -50,12 +50,14 @@
     <!-- нижний колонтитул -->
 
     <section class="popup" id="profileSettings">
-        <div class="popup__container">
+        <div class="popup__container popup-field">
             <button aria-label="Закрыть." class="close-button"></button>
             <h2 class="popup__title">Редактировать профиль</h2>
-            <form class="popup__form" id="profileForm">
-                <input type="text" placeholder="Напишите имя" value="Жак-Ив Кусто" class="popup__input popup__input_type_upper" id="profileName" name="profile name">
-                <input type="text" placeholder="Напишите миссию" value="Исследователь океана" class="popup__input popup__input_type_lower" id="profileMission" name="profile mission">
+            <form class="popup__form" id="profileForm" name="profile-form">
+                <input type="text" placeholder="Напишите имя" value="Жак-Ив Кусто" class="popup__input" id="profileName" name="profile-name" maxlength="40" minlength="2" required>
+                <span class="popup__input-warning profileName-warning"></span>
+                <input type="text" placeholder="Напишите миссию" value="Исследователь океана" class="popup__input" id="profileMission" name="profile-mission" maxlength="200" minlength="2" required>
+                <span class="popup__input-warning profileMission-warning"></span>
                 <button type="submit" class="popup__save-button">Сохранить</button>
             </form>
         </div>
@@ -63,25 +65,29 @@
     <!-- форма профиля  -->
 
     <section class="popup" id="newLocation">
-        <div class="popup__container">
+        <div class="popup__container popup-field">
             <button aria-label="Закрыть." class="close-button"></button>
             <h2 class="popup__title">Новое место</h2>
-            <form class="popup__form" id="locationForm">
-                <input type="text" placeholder="Название" class="popup__input popup__input_type_upper" id="locationName" name="location name">
-                <input type="text" placeholder="Ссылка на картинку" class="popup__input popup__input_type_lower" id="locationLink" name="location link" required>
+            <form class="popup__form" id="locationForm" name="location-form">
+                <input type="text" placeholder="Название" class="popup__input" id="locationName" name="location-name" maxlength="30" minlength="2" required>
+                <span class="popup__input-warning locationName-warning"></span>
+                <input type="url" placeholder="Ссылка на картинку" class="popup__input" id="locationLink" name="location-link" required>
+                <span class="popup__input-warning locationLink-warning"></span>
                 <button type="submit" class="popup__save-button">Создать</button>
             </form>
         </div>
     </section>
     <!-- форма добавления элемента в альбом -->
         
-    <section class="popup popup_type_behold" id="beholdGallery">
-        <div class="behold markup">
+    <section class="popup popup_type_behold" id="beholdGallery" name="behold-gallery">
+        <div class="behold markup popup-field">
             <img class="behold__image">
             <p class="behold__name"></p>
             <button aria-label="Закрыть." class="close-button"></button>
         </div>
     </section>
-    <script src='./scripts/index.js'></script>    
+    <!-- режим просмотра -->
+    <script src='./scripts/index.js'></script>
+    <script src='./scripts/validate.js'></script>
 </body>
 </html>

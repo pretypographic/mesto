@@ -37,10 +37,12 @@
 @import url(../blocks/popup/_type/popup_type_behold.css);
 @import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/__title/popup__title.css);
+@import url(../blocks/popup/__form/popup__form.css);
 @import url(../blocks/popup/__input/popup__input.css);
-@import url(../blocks/popup/__input/_type/popup__input_type_upper.css);
-@import url(../blocks/popup/__input/_type/popup__input_type_lower.css);
+@import url(../blocks/popup/__input/_invalid/popup__input_invalid.css);
+@import url(../blocks/popup/__input-warning/popup__input-warning.css);
 @import url(../blocks/popup/__save-button/popup__save-button.css);
+@import url(../blocks/popup/__save-button/_disabled/popup__save-button_disabled.css);
 /* форма */
 @import url(../blocks/behold/behold.css);
 @import url(../blocks/behold/__image/behold__image.css);
