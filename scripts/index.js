@@ -20,12 +20,21 @@ const beholdDescription = beholdGallery.querySelector('.behold__name');
 function openPopup(form) {
   form.classList.remove('popup_condition_closed');
   form.classList.add('popup_condition_opened');
+  document.addEventListener('keydown', closeByEscape);
 };
 
 function closePopup(form) {
   form.classList.remove('popup_condition_opened');
   form.classList.add('popup_condition_closed');
+  document.removeEventListener('keydown', closeByEscape);
 };
+
+function closeByEscape(event) {
+  if (event.key === 'Escape') {
+    const openedForm = document.querySelector('.popup_condition_opened');
+    closePopup(openedForm);
+  }
+}
 
 function submitProfileForm(event) {
   event.preventDefault();
@@ -47,6 +56,8 @@ function submitLocationForm(event) {
   renderGalery(location);
   closePopup(newLocation);
   locationForm.reset();
+  locationForm.lastElementChild.setAttribute('disabled', true);
+  locationForm.lastElementChild.classList.add(settings.submitButtonDisabled);
 };
 
 const editButton = profile.querySelector('.profile__edit-button');
@@ -61,25 +72,17 @@ const addButton = profile.querySelector('.profile__add-button');
 addButton.addEventListener('click', () => openPopup(newLocation));
 locationForm.addEventListener('submit', submitLocationForm);
 
-const closeButtons = document.querySelectorAll('.close-button');
-closeButtons.forEach((button) => {
-  const popup = button.closest('.popup');
-  button.addEventListener('click', () => closePopup(popup));
-});
-
 const popups = document.querySelectorAll('.popup');
 popups.forEach((popup) => {
-  popup.addEventListener('click', (event) => {
+  popup.addEventListener('mousedown', (event) => {
     const popupField = popup.querySelector('.popup-field');
     const withinPopupField = event.composedPath().includes(popupField);
     if (!withinPopupField) {
       closePopup(popup);
     }
-    document.addEventListener('keyup', (event) => {
-      if (event.key == 'Escape') {
-        closePopup(popup);
-      }
-    })
+    if (event.target.classList.contains('close-button')) {
+      closePopup(popup)
+    }
   })
 })
 
