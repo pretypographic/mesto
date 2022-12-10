@@ -56,8 +56,8 @@ function submitLocationForm(event) {
   renderGalery(location);
   closePopup(newLocation);
   locationForm.reset();
-  locationForm.lastElementChild.setAttribute('disabled', true);
-  locationForm.lastElementChild.classList.add(settings.submitButtonDisabled);
+  event.submitter.setAttribute('disabled', true);
+  event.submitter.classList.add(settings.submitButtonDisabled);
 };
 
 const editButton = profile.querySelector('.profile__edit-button');
